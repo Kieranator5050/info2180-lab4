@@ -1,0 +1,94 @@
+/*https://www.cdnfonts.com/cutive-mono.font <- font source*/
+body {
+  background-color: #FAF9F9;
+  font-family: 'Cutive Mono', sans-serif;
+  font-size: 20px;
+}
+
+li {
+  color: #262566;
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+h1{
+  font-size: 40px;
+}
+
+/*Result Text*/
+h2{
+  color: red;
+}
+
+/*Alias*/
+h3 {
+  color: #262566;
+  font-style: oblique;
+  font-weight: bolder;
+}
+/*Name*/
+h4 {
+  color: #262566;
+  font-style: oblique;
+  font-weight: bolder;
+}
+
+.bio{
+  color: #262566;
+}
+
+header{
+  background-color: #E70000;
+}
+
+.hContainer, .sContainer, .rContainer, .fContainer {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 2% 2% 2% 2%;
+  width: 100%;
+}
+
+.inputForm{
+  display: grid;
+  grid-template-rows: 120%;
+  grid-template-columns: 80% 20%;
+}
+
+#tInput{
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 5px 5px #E2E8F0;
+  margin: 0px 0px;
+  padding: 12px 12px 12px 12px;
+}
+#sBtn{
+  background-color: #B00101;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  margin: 0px 0px;
+  padding: 12px 0;
+}
+#sBtn:hover{
+  background-color: #E70000;
+  cursor: pointer;
+}
+
+.hContainer{
+  align-items: center;
+  color: #FFFDEF;
+  display: flex;
+  justify-content: center;
+}
+
+.rContainer{
+  background-color: #FFFDBB;
+}
+
+.notFound {
+  color: red;
+  font-style: italic;
+  font-weight: bolder;
+}
