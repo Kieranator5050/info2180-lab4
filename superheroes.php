@@ -60,13 +60,51 @@ $superheroes = [
       "name" => "Wanda Maximoff",
       "alias" => "Scarlett Witch",
       "biography" => "Notably powerful, Wanda Maximoff has fought both against and with the Avengers, attempting to hone her abilities and do what she believes is right to help the world.",
-  ], 
+  ],
 ];
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+
+<?php
+  /*
+  isHero Function
+  - Searches through heroes
+  - Checks for matching alias or name
+  - Returns [true, superhero] if found, [false,NULL] if not
+  */
+  function isHero($hero, $heroList)
+  {
+    foreach ($heroList as $superhero) {
+      if(strtoupper($superhero['name'])==strtoupper($hero)
+      || strtoupper($superhero['alias'])==strtoupper($hero)) {
+        return [true,$superhero];
+      }
+    }
+    return [false,NULL];
+  };
+
+  //Taking query url param
+  $query = $_REQUEST["query"];
+  //var_dump($query);
+  $hCheck = isHero($query,$superheroes);
+  //If hero is found create bio section
+  if($hCheck[0]){
+    $alias = $hCheck[1]['alias']; $name = $hCheck[1]['name'];
+    $bio = $hCheck[1]['biography'];
+    echo "<h3>$alias</h3>";
+    echo "<h4>$name</h4>";
+    echo "<p>$bio</p>";
+  //Blank input display all heroes
+  } elseif ($query==="") {
+    echo "<ul>";
+    foreach ($superheroes as $superhero){
+      $alias = $superhero['alias'];
+      echo "<li> $alias </li>";
+    }
+    echo "</ul>";
+  //No hero found
+  } else {
+    echo "<p>Superhero not found</p>";
+  }
+?>
