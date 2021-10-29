@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>info2180-lab4</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="http://fonts.cdnfonts.com/css/cutive-mono" rel="stylesheet">
   </head>
   <body>
 
@@ -20,7 +21,7 @@
         <h4>Seach by Full Name or Alias</h4>
         <!-- NOTE: Search Form -->
         <form class="inputForm" action="" method="post" onclick="return false">
-          <input type="text" name="Text" value="" id="tInput">
+          <input type="text" name="Text" value="" id="tInput" placeholder="eg. Captain America or Steve Rogers">
           <input type="submit" name="Submit" value="Search" id="sBtn">
         </form>
       </div>
@@ -30,16 +31,17 @@
     <section class="resultSection">
       <div class="rContainer">
         <h2>RESULT</h2>
+        <hr>
         <div id="result"> </div>
+        <footer>
+          <div class="fContainer">
+            Copyright 2021@Kieran Jaggernauth
+          </div>
+        </footer>
       </div>
     </section>
 
     <!-- Footer  -->
-    <footer>
-      <div class="fContainer">
-        <p>Copyright 2021@Kieran Jaggernauth</p>
-      </div>
-    </footer>
   <!-- Loading scripts last  -->
   <script src ="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="app.js"></script>

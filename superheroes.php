@@ -85,7 +85,7 @@ $superheroes = [
   };
 
   //Taking query url param
-  $query = $_REQUEST["query"];
+  $query = $_GET["query"];
   //var_dump($query);
   $hCheck = isHero($query,$superheroes);
   //If hero is found create bio section
@@ -93,8 +93,9 @@ $superheroes = [
     $alias = $hCheck[1]['alias']; $name = $hCheck[1]['name'];
     $bio = $hCheck[1]['biography'];
     echo "<h3>$alias</h3>";
-    echo "<h4>$name</h4>";
-    echo "<p>$bio</p>";
+    echo "<h4>A.K.A $name</h4>";
+    echo "<p class=\"bio\">$bio</p>";
+    echo "<hr />";
   //Blank input display all heroes
   } elseif ($query==="") {
     echo "<ul>";
@@ -103,8 +104,10 @@ $superheroes = [
       echo "<li> $alias </li>";
     }
     echo "</ul>";
+    echo "<hr />";
   //No hero found
   } else {
-    echo "<p>Superhero not found</p>";
+    echo "<p class=\"notFound\">SUPERHERO NOT FOUND</p>";
+    echo "<hr />";
   }
 ?>
