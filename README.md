@@ -1,3 +1,3 @@
-#INFO2180 Lab 4
+# INFO2180 Lab 4
 
-This is Lab 4 for Kieran Jaggernauth
+This is lab 4 for Kieran Jaggernauth
