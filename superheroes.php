@@ -85,7 +85,7 @@ $superheroes = [
   };
 
   //Taking query url param
-  $query = $_GET["query"];
+  $query = filter_var($_GET["query"], FILTER_SANITIZE_STRING);
   //var_dump($query);
   $hCheck = isHero($query,$superheroes);
   //If hero is found create bio section
